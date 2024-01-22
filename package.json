@@ -11,7 +11,7 @@
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "run:ios:beta": "npx cap run ios --scheme=\"Beta\"",
+    "run:ios:beta": "npx cap run ios --scheme=\"Beta\" --configuration=\"Debug Test\"",
     "run:ios:prod": "npx cap run ios --scheme=\"Prod\""
   },
   "dependencies": {

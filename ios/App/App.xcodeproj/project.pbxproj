@@ -18,10 +18,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B7B03452B5E729100346712 /* Test Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Test Config.xcconfig"; sourceTree = "<group>"; };
+		0B7B03462B5E72E200346712 /* Prod Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Prod Config.xcconfig"; sourceTree = "<group>"; };
 		2FAD9762203C412B000D30F8 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = config.xml; sourceTree = "<group>"; };
 		30EA3533F60C65F270EE70D7 /* Pods-App.release test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release test.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.release test.xcconfig"; sourceTree = "<group>"; };
 		50379B222058CBB4000EE86E /* capacitor.config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = capacitor.config.json; sourceTree = "<group>"; };
-		504EC3041FED79650016851F /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		504EC3041FED79650016851F /* Prod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		504EC3071FED79650016851F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		504EC30C1FED79650016851F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		504EC30E1FED79650016851F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,7 +69,7 @@
 		504EC3051FED79650016851F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				504EC3041FED79650016851F /* App.app */,
+				504EC3041FED79650016851F /* Prod.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,6 +85,8 @@
 				504EC3131FED79650016851F /* Info.plist */,
 				2FAD9762203C412B000D30F8 /* config.xml */,
 				50B271D01FEDC1A000F3C39B /* public */,
+				0B7B03452B5E729100346712 /* Test Config.xcconfig */,
+				0B7B03462B5E72E200346712 /* Prod Config.xcconfig */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -117,7 +121,7 @@
 			);
 			name = App;
 			productName = App;
-			productReference = 504EC3041FED79650016851F /* App.app */;
+			productReference = 504EC3041FED79650016851F /* Prod.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -239,6 +243,7 @@
 /* Begin XCBuildConfiguration section */
 		0BAFCD9E2B5E577C0020A598 /* Debug Test */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B7B03452B5E729100346712 /* Test Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -307,7 +312,7 @@
 				MARKETING_VERSION = 1.0;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Beta;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -316,6 +321,7 @@
 		};
 		0BAFCDA02B5E57870020A598 /* Release Test */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B7B03452B5E729100346712 /* Test Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -376,7 +382,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Beta;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -385,6 +391,7 @@
 		};
 		504EC3141FED79650016851F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B7B03462B5E72E200346712 /* Prod Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -442,6 +449,7 @@
 		};
 		504EC3151FED79650016851F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B7B03462B5E72E200346712 /* Prod Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -503,7 +511,7 @@
 				MARKETING_VERSION = 1.0;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Prod;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -522,7 +530,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Prod;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
